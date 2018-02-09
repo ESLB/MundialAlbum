@@ -17,7 +17,7 @@ public class Splash_0 extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                startActivity(new Intent(context, Logging_1.class));
+                startActivity(new Intent(context, Central_4.class));
                 finish();
             }
         }, 1500);   //5 seconds

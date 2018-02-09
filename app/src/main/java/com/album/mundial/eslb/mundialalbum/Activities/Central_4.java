@@ -1,16 +1,76 @@
 package com.album.mundial.eslb.mundialalbum.Activities;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
+import com.album.mundial.eslb.mundialalbum.Fragments.ComprarFragment_11;
+import com.album.mundial.eslb.mundialalbum.Fragments.GruposFragment_5;
+import com.album.mundial.eslb.mundialalbum.Fragments.MiPerfilFragment_7;
+import com.album.mundial.eslb.mundialalbum.Fragments.VistaAmigosFragment_10;
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.drawer.DrawerFragment;
 
 public class Central_4 extends AppCompatActivity {
+
+    public static Toolbar toolbar;
+    public static FragmentManager fm;
+    public static Fragment fragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.central_activity_4);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Album Mundial");
+        fm = getSupportFragmentManager();
+        fragment = fm.findFragmentById(R.id.fragment_container);
+
+        if(fragment == null){
+            fragment = new GruposFragment_5();
+            fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
+        }
+
+        setUpDrawer();
+
     }
+
+    public static void CambiarPestana(String nombre){
+        switch (nombre){
+            case "Comprar Stickers":
+                fragment = new ComprarFragment_11();
+                toolbar.setSubtitle("Compra tus Stickers: ");
+                break;
+            case "Inicio":
+                fragment = new GruposFragment_5();
+                toolbar.setSubtitle("");
+                break;
+            case "Mi Perfil":
+                fragment = new MiPerfilFragment_7();
+                toolbar.setSubtitle("Mi Perfil");
+                break;
+            case "Mis Amigos":
+                fragment = new VistaAmigosFragment_10();
+                toolbar.setSubtitle("Mis Amigos");
+                break;
+
+        }
+        if(fm!=null){
+            fm.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        }
+    }
+
+
+    private void setUpDrawer() {
+        DrawerFragment drawerFragment = (DrawerFragment) getSupportFragmentManager().findFragmentById(R.id.drawer_fragment);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerFragment.setUpDrawer(R.id.drawer_fragment, drawerLayout, toolbar);
+    }
+
 }
 
