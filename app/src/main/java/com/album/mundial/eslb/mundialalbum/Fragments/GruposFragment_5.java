@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.album.mundial.eslb.mundialalbum.R;
 
+import static com.album.mundial.eslb.mundialalbum.Activities.Central_4.CambiarPestana;
+
 
 public class GruposFragment_5 extends Fragment {
 
@@ -39,23 +41,30 @@ public class GruposFragment_5 extends Fragment {
         mGrupoA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), mGrupoA.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), mGrupoA.getText().toString(), Toast.LENGTH_SHORT).show();
+                llamarPaises();
             }
         });
         mGrupoB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), mGrupoB.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), mGrupoB.getText().toString(), Toast.LENGTH_SHORT).show();
+                llamarPaises();
             }
         });
         mGrupoC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), mGrupoC.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), mGrupoC.getText().toString(), Toast.LENGTH_SHORT).show();
+                llamarPaises();
             }
         });
 
         return view;
+    }
+
+    public void llamarPaises(){
+        CambiarPestana("Paises");
     }
 
 

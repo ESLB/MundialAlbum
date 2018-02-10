@@ -1,5 +1,6 @@
 package com.album.mundial.eslb.mundialalbum.drawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.album.mundial.eslb.mundialalbum.Activities.Logging_1;
 import com.album.mundial.eslb.mundialalbum.R;
 
 import java.util.ArrayList;
@@ -107,7 +109,8 @@ public class DrawerFragment extends Fragment {
                     //Toast.makeText(getActivity(), holder.mNombres.getText(), Toast.LENGTH_SHORT).show();
                     String mandato =holder.mNombres.getText().toString();
                     if(mandato.equals("Cerrar Sesion"))
-                        getActivity().finish();
+                    {startActivity(new Intent(getActivity(), Logging_1.class));
+                        getActivity().finish();}
                     else
                     CambiarPestana(mandato);
                     mDrawerLayout.closeDrawer(GravityCompat.START);

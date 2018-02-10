@@ -8,14 +8,18 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.album.mundial.eslb.mundialalbum.Fragments.ComprarFragment_11;
+import com.album.mundial.eslb.mundialalbum.Fragments.DetalleJugadorFragment_9;
 import com.album.mundial.eslb.mundialalbum.Fragments.GruposFragment_5;
+import com.album.mundial.eslb.mundialalbum.Fragments.JugadoresFragment_8;
 import com.album.mundial.eslb.mundialalbum.Fragments.MiPerfilFragment_7;
-import com.album.mundial.eslb.mundialalbum.Fragments.VistaAmigosFragment_10;
+import com.album.mundial.eslb.mundialalbum.Fragments.AmigosFragment_10;
+import com.album.mundial.eslb.mundialalbum.Fragments.PaisesFragment_6;
 import com.album.mundial.eslb.mundialalbum.R;
 import com.album.mundial.eslb.mundialalbum.drawer.DrawerFragment;
 
 public class Central_4 extends AppCompatActivity {
 
+    private static int orden = 0;
     public static Toolbar toolbar;
     public static FragmentManager fm;
     public static Fragment fragment;
@@ -55,8 +59,23 @@ public class Central_4 extends AppCompatActivity {
                 toolbar.setSubtitle("Mi Perfil");
                 break;
             case "Mis Amigos":
-                fragment = new VistaAmigosFragment_10();
+                fragment = new AmigosFragment_10();
                 toolbar.setSubtitle("Mis Amigos");
+                break;
+            case "Paises":
+                fragment = new PaisesFragment_6();
+                toolbar.setSubtitle("Bloque A");
+                orden = 1;
+                break;
+            case "Jugadores":
+                fragment = new JugadoresFragment_8();
+                toolbar.setSubtitle("Dinamarca");
+                orden = 2;
+                break;
+            case "DetalleJugador":
+                fragment = new DetalleJugadorFragment_9();
+                toolbar.setSubtitle("");
+                orden = 3;
                 break;
 
         }
@@ -72,5 +91,32 @@ public class Central_4 extends AppCompatActivity {
         drawerFragment.setUpDrawer(R.id.drawer_fragment, drawerLayout, toolbar);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        switch (orden){
+            case 0:
+                super.onBackPressed();
+                break;
+            case 1:
+                fragment = new GruposFragment_5();
+                toolbar.setSubtitle("");
+                orden = 0;
+                break;
+            case 2:
+                fragment = new PaisesFragment_6();
+                orden = 1;
+                toolbar.setSubtitle("Bloque A");
+                break;
+            case 3:
+                fragment = new JugadoresFragment_8();
+                orden = 2;
+                toolbar.setSubtitle("Dinamarca");
+                break;
+        }
+        if(fm!=null){
+            fm.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        }
+    }
 }
 

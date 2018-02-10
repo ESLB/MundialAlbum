@@ -17,12 +17,12 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="61dp"
-        android:layout_height="65dp"
+        android:layout_width="64dp"
+        android:layout_height="71dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        app:srcCompat="@drawable/foto_perfil" />
 
 </android.support.constraint.ConstraintLayout>

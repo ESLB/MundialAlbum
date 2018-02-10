@@ -19,12 +19,12 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class VistaAmigosFragment_10 extends Fragment {
+public class AmigosFragment_10 extends Fragment {
 
     private RecyclerView mRecyclerView;
     private AmigosAdapter mAmigosAdapter;
 
-    public VistaAmigosFragment_10() {
+    public AmigosFragment_10() {
     }
 
     @Override
