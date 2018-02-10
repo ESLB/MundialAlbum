@@ -104,7 +104,7 @@ public class DrawerFragment extends Fragment {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(getActivity(), holder.mNombres.getText(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getActivity(), holder.mNombres.getText(), Toast.LENGTH_SHORT).show();
                     String mandato =holder.mNombres.getText().toString();
                     if(mandato.equals("Cerrar Sesion"))
                         getActivity().finish();
