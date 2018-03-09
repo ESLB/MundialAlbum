@@ -11,45 +11,45 @@
         android:id="@+id/logoLogging"
         android:layout_width="174dp"
         android:layout_height="185dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_aplicacion" />
+        app:srcCompat="@drawable/logo_aplicacion"/>
 
     <EditText
         android:id="@+id/loggingEmail"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="228dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/loggingContrasena"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="296dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/iniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="28dp"
         android:text="Iniciar Sesión"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loggingContrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/loggingContrasena"/>
 
     <Button
         android:id="@+id/button3"
