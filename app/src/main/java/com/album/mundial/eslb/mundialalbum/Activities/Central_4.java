@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.album.mundial.eslb.mundialalbum.Fragments.AlbumFragment_12;
 import com.album.mundial.eslb.mundialalbum.Fragments.ComprarFragment_11;
 import com.album.mundial.eslb.mundialalbum.Fragments.DetalleJugadorFragment_9;
 import com.album.mundial.eslb.mundialalbum.Fragments.GruposFragment_5;
@@ -15,6 +16,7 @@ import com.album.mundial.eslb.mundialalbum.Fragments.MiPerfilFragment_7;
 import com.album.mundial.eslb.mundialalbum.Fragments.AmigosFragment_10;
 import com.album.mundial.eslb.mundialalbum.Fragments.PaisesFragment_6;
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
 import com.album.mundial.eslb.mundialalbum.drawer.DrawerFragment;
 
 public class Central_4 extends AppCompatActivity {
@@ -46,23 +48,27 @@ public class Central_4 extends AppCompatActivity {
 
     public static void CambiarPestana(String nombre){
         switch (nombre){
-            case "Comprar Stickers":
+            case FragmentNames.COMPRAR_STICK:
                 fragment = new ComprarFragment_11();
                 toolbar.setSubtitle("Compra tus Stickers: ");
                 break;
-            case "Inicio":
+            case FragmentNames.INICIO:
                 fragment = new GruposFragment_5();
                 toolbar.setSubtitle("");
                 break;
-            case "Mi Perfil":
+            case FragmentNames.MI_PERFIL:
                 fragment = new MiPerfilFragment_7();
                 toolbar.setSubtitle("Mi Perfil");
                 break;
-            case "Mis Amigos":
+            case FragmentNames.MIS_AMIGOS:
                 fragment = new AmigosFragment_10();
                 toolbar.setSubtitle("Mis Amigos");
                 break;
-            case "Paises":
+            case FragmentNames.MI_ALBUM:
+                fragment = new AlbumFragment_12();
+                toolbar.setSubtitle("");
+                break;
+            case FragmentNames.PAISES:
                 fragment = new PaisesFragment_6();
                 toolbar.setSubtitle("Bloque A");
                 orden = 1;
@@ -77,7 +83,6 @@ public class Central_4 extends AppCompatActivity {
                 toolbar.setSubtitle("");
                 orden = 3;
                 break;
-
         }
         if(fm!=null){
             fm.beginTransaction().replace(R.id.fragment_container, fragment).commit();

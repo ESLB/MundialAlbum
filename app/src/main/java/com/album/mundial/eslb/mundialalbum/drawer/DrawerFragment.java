@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.album.mundial.eslb.mundialalbum.Activities.Intercambio_13;
 import com.album.mundial.eslb.mundialalbum.Activities.Logging_1;
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,11 +54,14 @@ public class DrawerFragment extends Fragment {
 
     private List<DrawerItem> createDatos(){
         List<DrawerItem> items = new ArrayList<>();
-        items.add(new DrawerItem("Inicio", ""));
-        items.add(new DrawerItem("Mi Perfil", ""));
-        items.add(new DrawerItem("Comprar Stickers",""));
-        items.add(new DrawerItem("Mis Amigos", ""));
-        items.add(new DrawerItem("Cerrar Sesion", ""));
+        items.add(new DrawerItem("Mi Album", "", FragmentNames.MI_ALBUM));
+        items.add(new DrawerItem("Intercambiar Stickers", "", FragmentNames.INTERCAMBIAR));
+        items.add(new DrawerItem("Comprar Stickers","", FragmentNames.COMPRAR_STICK));
+        items.add(new DrawerItem("Inicio", "", FragmentNames.INICIO));
+        items.add(new DrawerItem("Mi Perfil", "", FragmentNames.MI_PERFIL));
+        items.add(new DrawerItem("Mis Amigos", "", FragmentNames.MIS_AMIGOS));
+        items.add(new DrawerItem("Concursos","", FragmentNames.CONCURSOS));
+        items.add(new DrawerItem("Cerrar Sesion", "", FragmentNames.CERRAR_SESION));
         return items;
     }
 
@@ -101,16 +106,21 @@ public class DrawerFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(final ItemsHolder holder, int position) {
-            DrawerItem item = mItems.get(position);
+            final DrawerItem item = mItems.get(position);
             holder.bindData(item);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     //Toast.makeText(getActivity(), holder.mNombres.getText(), Toast.LENGTH_SHORT).show();
-                    String mandato =holder.mNombres.getText().toString();
-                    if(mandato.equals("Cerrar Sesion"))
+                    String mandato = item.getFragmentTAG();
+                    if(mandato.equals(FragmentNames.CERRAR_SESION))
                     {startActivity(new Intent(getActivity(), Logging_1.class));
                         getActivity().finish();}
+                    else if(mandato.equals(FragmentNames.INTERCAMBIAR))
+                    {
+                        Intent i = new Intent(getActivity(), Intercambio_13.class);
+                        startActivity(i);
+                    }
                     else
                     CambiarPestana(mandato);
                     mDrawerLayout.closeDrawer(GravityCompat.START);

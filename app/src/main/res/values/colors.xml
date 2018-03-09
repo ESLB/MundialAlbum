@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="header">#d0d0d0</color>
     <color name="tint">#4c4b4b4b</color>
+    <color name="equipos">#edff0073</color>
+    <color name="sedes">#0ba471</color>
+    <color name="fixture">#5699d9</color>
+    <color name="album">#b5d4f2</color>
 </resources>
