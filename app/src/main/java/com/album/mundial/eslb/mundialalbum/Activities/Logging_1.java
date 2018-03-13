@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.SingletonStickers;
 
 public class Logging_1 extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class Logging_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logging_activity_1);
-
+        SingletonStickers SS = SingletonStickers.get(getApplicationContext());
         mLogo = (ImageView) findViewById(R.id.logoLogging);
         mIniciarSesion = (Button) findViewById(R.id.iniciarSesion);
         mEmail = (EditText) findViewById(R.id.loggingEmail);

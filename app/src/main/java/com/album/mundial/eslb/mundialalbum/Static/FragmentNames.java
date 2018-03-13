@@ -12,7 +12,6 @@ public class FragmentNames {
     public static final String CONCURSOS = "concursos";
     public static final String PAISES = "paises";
 
-
 }
 
 

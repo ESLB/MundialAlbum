@@ -27,53 +27,19 @@ public class SingletonStickers {
         GenerarStickersVacios();
     }
 
-    public List<StickersModel> getPaises(){
-        List<StickersModel> stickersPaises = new ArrayList<>();
+
+    private List<StickersModel> VacioFutbolistas = new ArrayList<>();
+    private List<StickersModel> VacioEquipos = new ArrayList<>();
+    private List<StickersModel> VacioSedes = new ArrayList<>();
+    private List<StickersModel> VacioFixture = new ArrayList<>();
 
 
-
-        return stickersPaises;
-    }
-
-    public List<StickersModel> getFutbolistas(){
-        List<StickersModel> stickersFutbolistas = new ArrayList<>();
-
-
-
-        return stickersFutbolistas;
-    }
-
-    public List<StickersModel> getEquipos(){
-        List<StickersModel> stickersEquipos = new ArrayList<>();
-
-
-
-        return stickersEquipos;
-    }
-
-    public List<StickersModel> getSedes(){
-        List<StickersModel> stickersSedes = new ArrayList<>();
-
-
-
-        return stickersSedes;
-    }
-
-    public List<StickersModel> getFixture(){
-        List<StickersModel> stickersFixture = new ArrayList<>();
-
-
-
-        return stickersFixture;
-    }
 
     List<StickersModel> TengoPaises = new ArrayList<>();
     List<StickersModel> TengoFutbolistas = new ArrayList<>();
     List<StickersModel> TengoEquipos = new ArrayList<>();
     List<StickersModel> TengoSedes = new ArrayList<>();
     List<StickersModel> TengoFixture = new ArrayList<>();
-
-
 
     private List<StickersModel> VacioPaises = new ArrayList<>();
 
@@ -96,11 +62,6 @@ public class SingletonStickers {
     public List<StickersModel> getVacioFixture() {
         return VacioFixture;
     }
-
-    private List<StickersModel> VacioFutbolistas = new ArrayList<>();
-    private List<StickersModel> VacioEquipos = new ArrayList<>();
-    private List<StickersModel> VacioSedes = new ArrayList<>();
-    private List<StickersModel> VacioFixture = new ArrayList<>();
 
 
 
