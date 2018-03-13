@@ -23,7 +23,8 @@
         <activity android:name=".Activities.Central_4" />
         <activity android:name=".Activities.Logging_1" />
         <activity android:name=".Otros.Splash_00" />
-        <activity android:name=".Activities.Intercambio_13"></activity>
+        <activity android:name=".Activities.Intercambio_13" />
+        <activity android:name=".Activities.MainActivity"></activity>
     </application>
 
 </manifest>

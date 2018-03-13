@@ -2,10 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/album"
+    android:orientation="vertical"
     tools:context="com.album.mundial.eslb.mundialalbum.Fragments.AlbumFragment_12">
 
+
+    <Button
+        android:id="@+id/futbolistasButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@color/futbolistas"
+        android:text="Futbolistas"
+        android:textSize="30sp"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/equiposButton"
