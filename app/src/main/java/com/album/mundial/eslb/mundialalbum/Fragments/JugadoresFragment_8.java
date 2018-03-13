@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import com.album.mundial.eslb.mundialalbum.ModelsDummy.Item;
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.SingletonStickers;
+import com.album.mundial.eslb.mundialalbum.models.StickersModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,14 +53,19 @@ public class JugadoresFragment_8 extends Fragment {
 
     private List<Item> creatItems(){
         List<Item> items = new ArrayList<>();
-        items.add(new Item(R.drawable.jugador_11,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_22,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_33,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_44,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_55,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_66,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_77,"Eduardo"));
-        items.add(new Item(R.drawable.jugador_88,"Eduardo"));
+        SingletonStickers ss = SingletonStickers.get(getActivity());
+        List<StickersModel> stickerModel = ss.getVacioFutbolistas();
+        for(StickersModel s : stickerModel){
+            items.add(new Item(s.getIdImagen(), s.getShortTxt()));
+        }
+          items.add(new Item(R.drawable.jugador_11,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_22,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_33,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_44,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_55,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_66,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_77,"Eduardo"));
+//        items.add(new Item(R.drawable.jugador_88,"Eduardo"));
         return items;
     }
 
@@ -80,14 +87,14 @@ public class JugadoresFragment_8 extends Fragment {
             mText.setText(item.getmText());
             if(item.getmImageId()!= 0){
                 mImage.setImageResource(item.getmImageId());
-                random = new Random();
-                int o = random.nextInt();
-                if(o%3==0){
-                    ColorMatrix matrix = new ColorMatrix();
-                    matrix.setSaturation(0);
-                    ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
-                    mImage.setColorFilter(filter);
-                }
+//                random = new Random();
+//                int o = random.nextInt();
+//                if(o%3==0){
+//                    ColorMatrix matrix = new ColorMatrix();
+//                    matrix.setSaturation(0);
+//                    ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
+//                    mImage.setColorFilter(filter);
+//                }
             }
         }
 

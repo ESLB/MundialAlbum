@@ -12,8 +12,8 @@ public class Splash_0 extends AppCompatActivity {
 
     Context context = this;
 
-    SingletonStickers SS = SingletonStickers.get(getApplicationContext());
-    
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class Splash_0 extends AppCompatActivity {
                 startActivity(new Intent(context, Logging_1.class));
                 finish();
             }
-        }, 1000);   //5 seconds
+        }, 1000);
     }
 
 }

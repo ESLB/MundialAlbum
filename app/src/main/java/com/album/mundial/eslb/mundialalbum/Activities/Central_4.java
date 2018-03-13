@@ -16,6 +16,7 @@ import com.album.mundial.eslb.mundialalbum.Fragments.MiPerfilFragment_7;
 import com.album.mundial.eslb.mundialalbum.Fragments.AmigosFragment_10;
 import com.album.mundial.eslb.mundialalbum.Fragments.PaisesFragment_6;
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.SingletonStickers;
 import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
 import com.album.mundial.eslb.mundialalbum.drawer.DrawerFragment;
 
@@ -31,6 +32,7 @@ public class Central_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.central_activity_4);
+        SingletonStickers SS = SingletonStickers.get(getApplicationContext());
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Album Mundial");
