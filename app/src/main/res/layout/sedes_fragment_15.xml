@@ -1,9 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.album.mundial.eslb.mundialalbum.Fragments.FutbolistasFragment_8">
+    android:background="@color/background_sede"
+    tools:context="com.album.mundial.eslb.mundialalbum.Fragments.SedesFragment_15">
 
     <TextView
         android:layout_marginTop="7dp"
@@ -12,15 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:text="Lista de Jugadores" />
+        android:text="Estadios del Mundial" />
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@android:color/black"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerJugadores"
+        android:id="@+id/recyclerSedes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

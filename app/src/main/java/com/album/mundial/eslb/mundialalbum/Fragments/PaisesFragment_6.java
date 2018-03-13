@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.album.mundial.eslb.mundialalbum.ModelsDummy.Item;
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +110,7 @@ public class PaisesFragment_6 extends Fragment {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    CambiarPestana("Jugadores");
+                    CambiarPestana(FragmentNames.FUTBOLISTAS);
                 }
             });
         }

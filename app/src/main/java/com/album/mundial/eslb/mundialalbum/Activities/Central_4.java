@@ -10,11 +10,14 @@ import android.support.v7.widget.Toolbar;
 import com.album.mundial.eslb.mundialalbum.Fragments.AlbumFragment_12;
 import com.album.mundial.eslb.mundialalbum.Fragments.ComprarFragment_11;
 import com.album.mundial.eslb.mundialalbum.Fragments.DetalleJugadorFragment_9;
+import com.album.mundial.eslb.mundialalbum.Fragments.EquiposFragment_14;
+import com.album.mundial.eslb.mundialalbum.Fragments.FixtureFragment_16;
 import com.album.mundial.eslb.mundialalbum.Fragments.GruposFragment_5;
-import com.album.mundial.eslb.mundialalbum.Fragments.JugadoresFragment_8;
+import com.album.mundial.eslb.mundialalbum.Fragments.FutbolistasFragment_8;
 import com.album.mundial.eslb.mundialalbum.Fragments.MiPerfilFragment_7;
 import com.album.mundial.eslb.mundialalbum.Fragments.AmigosFragment_10;
 import com.album.mundial.eslb.mundialalbum.Fragments.PaisesFragment_6;
+import com.album.mundial.eslb.mundialalbum.Fragments.SedesFragment_15;
 import com.album.mundial.eslb.mundialalbum.R;
 import com.album.mundial.eslb.mundialalbum.SingletonStickers;
 import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
@@ -40,7 +43,7 @@ public class Central_4 extends AppCompatActivity {
         fragment = fm.findFragmentById(R.id.fragment_container);
 
         if(fragment == null){
-            fragment = new GruposFragment_5();
+            fragment = new AlbumFragment_12();
             fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
 
@@ -75,15 +78,25 @@ public class Central_4 extends AppCompatActivity {
                 toolbar.setSubtitle("Bloque A");
                 orden = 1;
                 break;
-            case "Jugadores":
-                fragment = new JugadoresFragment_8();
+            case FragmentNames.FUTBOLISTAS:
+                fragment = new FutbolistasFragment_8();
                 toolbar.setSubtitle("Dinamarca");
                 orden = 2;
                 break;
-            case "DetalleJugador":
-                fragment = new DetalleJugadorFragment_9();
-                toolbar.setSubtitle("");
-                orden = 3;
+            case FragmentNames.SEDES:
+                fragment = new SedesFragment_15();
+                toolbar.setSubtitle("Sedes");
+                orden = 1;
+                break;
+            case FragmentNames.EQUIPOS:
+                fragment = new EquiposFragment_14();
+                toolbar.setSubtitle("Equipos");
+                orden = 1;
+                break;
+            case FragmentNames.FIXTURE:
+                fragment = new FixtureFragment_16();
+                toolbar.setSubtitle("Fixture");
+                orden = 1;
                 break;
         }
         if(fm!=null){
@@ -106,7 +119,7 @@ public class Central_4 extends AppCompatActivity {
                 super.onBackPressed();
                 break;
             case 1:
-                fragment = new GruposFragment_5();
+                fragment = new AlbumFragment_12();
                 toolbar.setSubtitle("");
                 orden = 0;
                 break;
@@ -116,7 +129,7 @@ public class Central_4 extends AppCompatActivity {
                 toolbar.setSubtitle("Bloque A");
                 break;
             case 3:
-                fragment = new JugadoresFragment_8();
+                fragment = new FutbolistasFragment_8();
                 orden = 2;
                 toolbar.setSubtitle("Dinamarca");
                 break;

@@ -16,7 +16,7 @@ import static com.album.mundial.eslb.mundialalbum.Activities.Central_4.CambiarPe
 
 public class AlbumFragment_12 extends Fragment {
 
-    Button Equipos, Sedes, Fixture;
+    Button Futbolistas,Equipos, Sedes, Fixture;
 
     public AlbumFragment_12() {
 
@@ -36,31 +36,34 @@ public class AlbumFragment_12 extends Fragment {
         Equipos = (Button) view.findViewById(R.id.equiposButton);
         Sedes = (Button) view.findViewById(R.id.sedesButton);
         Fixture = (Button) view.findViewById(R.id.fixtureButton);
-
+        Futbolistas = (Button) view.findViewById(R.id.futbolistasButton);
         Equipos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                llamarPaises();
+                CambiarPestana(FragmentNames.EQUIPOS);
             }
         });
         Sedes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                llamarPaises();
+                CambiarPestana(FragmentNames.SEDES);
             }
         });
         Fixture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                llamarPaises();
+                CambiarPestana(FragmentNames.FIXTURE);
+            }
+        });
+        Futbolistas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CambiarPestana(FragmentNames.PAISES);
             }
         });
 
         return view;
     }
 
-    public void llamarPaises(){
-        CambiarPestana(FragmentNames.PAISES);
-    }
 
 }

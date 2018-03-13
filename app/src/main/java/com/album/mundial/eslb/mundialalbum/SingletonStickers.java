@@ -110,35 +110,39 @@ public class SingletonStickers {
 
         for(; i<=32; i++){
 
-            if(!(i==2||i==5||i==14||i==22||i==28))
+            if(i!=2&&i!=5&&i!=14&&i!=22&&i!=28)
             {
                 VacioPaises.add(new StickersModel(R.drawable.ejemplo_pais_no_tengo, "lore "+i,i));
             }
         }
-        VacioPaises.addAll(TengoEquipos);
+        VacioPaises.addAll(TengoPaises);
         Collections.sort(VacioPaises);
+
         for(; i<=93; i++){
-            if(!(i==2||i==5||i==14||i==22||i==28))
+            if(!(i==34||i==37||i==38||i==40||i==43))
             {
                 VacioFutbolistas.add(new StickersModel(R.drawable.ejemplo_futbolista_no_tengo, "lore "+i,i));
             }
         }
         VacioFutbolistas.addAll(TengoFutbolistas);
         Collections.sort(VacioFutbolistas);
+
         for(; i<=120; i++){
-            if(!(i==2||i==5||i==14||i==22||i==28))
+            if(!(i==94||i==96||i==99||i==102||i==105))
             {VacioEquipos.add(new StickersModel(R.drawable.ejemplo_equipo_no_tengo, "lore "+i,i));}
         }
         VacioEquipos.addAll(TengoEquipos);
         Collections.sort(VacioEquipos);
+
         for(; i<=140; i++){
-            if(!(i==2||i==5||i==14||i==22||i==28))
+            if(!(i==123||i==124||i==126||i==127||i==130))
             {VacioSedes.add(new StickersModel(R.drawable.ejemplo_sede_no_tengo, "lore "+i,i));}
         }
         VacioSedes.addAll(TengoSedes);
         Collections.sort(VacioSedes);
+
         for(; i<=160; i++){
-            if(!(i==2||i==5||i==14||i==22||i==28)){
+            if(!(i==141||i==143||i==145||i==146||i==148)){
                 VacioFixture.add(new StickersModel(R.drawable.ejemplo_fixture_no_tengo, "lore "+i,i));
             }
         }

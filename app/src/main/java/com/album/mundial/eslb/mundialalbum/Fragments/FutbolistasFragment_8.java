@@ -28,13 +28,13 @@ import java.util.Random;
 import static com.album.mundial.eslb.mundialalbum.Activities.Central_4.CambiarPestana;
 
 
-public class JugadoresFragment_8 extends Fragment {
+public class FutbolistasFragment_8 extends Fragment {
 
     private RecyclerView mRecyclerView;
     private ItemsAdapter  mItemsAdapter;
 
 
-    public JugadoresFragment_8() {
+    public FutbolistasFragment_8() {
         // Required empty public constructor
     }
 
@@ -58,7 +58,6 @@ public class JugadoresFragment_8 extends Fragment {
         for(StickersModel s : stickerModel){
             items.add(new Item(s.getIdImagen(), s.getShortTxt()));
         }
-          items.add(new Item(R.drawable.jugador_11,"Eduardo"));
 //        items.add(new Item(R.drawable.jugador_22,"Eduardo"));
 //        items.add(new Item(R.drawable.jugador_33,"Eduardo"));
 //        items.add(new Item(R.drawable.jugador_44,"Eduardo"));

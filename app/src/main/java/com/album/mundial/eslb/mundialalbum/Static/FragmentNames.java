@@ -11,6 +11,14 @@ public class FragmentNames {
     public static final String INTERCAMBIAR = "intercambiar stickers";
     public static final String CONCURSOS = "concursos";
     public static final String PAISES = "paises";
+    public static final String SEDES = "sedes";
+    public static final String FIXTURE = "fixture";
+    public static final String EQUIPOS = "equipos";
+    public static final String FUTBOLISTAS = "futbolistas";
+
+
+
+
 
 
 }
