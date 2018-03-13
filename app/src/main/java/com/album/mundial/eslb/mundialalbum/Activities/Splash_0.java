@@ -6,10 +6,14 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.album.mundial.eslb.mundialalbum.SingletonStickers;
+
 public class Splash_0 extends AppCompatActivity {
 
     Context context = this;
 
+    SingletonStickers SS = SingletonStickers.get(getApplicationContext());
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,7 @@ public class Splash_0 extends AppCompatActivity {
                 startActivity(new Intent(context, Logging_1.class));
                 finish();
             }
-        }, 1500);   //5 seconds
+        }, 1000);   //5 seconds
     }
+
 }
