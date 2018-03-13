@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.album.mundial.eslb.mundialalbum.R;
+import com.album.mundial.eslb.mundialalbum.Static.ArgumentsFragment;
 import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
 
 import static com.album.mundial.eslb.mundialalbum.Activities.Central_4.CambiarPestana;
@@ -40,19 +41,22 @@ public class AlbumFragment_12 extends Fragment {
         Equipos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CambiarPestana(FragmentNames.EQUIPOS);
+                CambiarPestana(FragmentNames.STICKERSUNO);
+                ArgumentsFragment.FragmentAmostrar = ArgumentsFragment.EQUIPOS;
             }
         });
         Sedes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CambiarPestana(FragmentNames.SEDES);
+                CambiarPestana(FragmentNames.STICKERSUNO);
+                ArgumentsFragment.FragmentAmostrar = ArgumentsFragment.SEDES;
             }
         });
         Fixture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CambiarPestana(FragmentNames.FIXTURE);
+                CambiarPestana(FragmentNames.STICKERSUNO);
+                ArgumentsFragment.FragmentAmostrar = ArgumentsFragment.FIXTURE;
             }
         });
         Futbolistas.setOnClickListener(new View.OnClickListener() {

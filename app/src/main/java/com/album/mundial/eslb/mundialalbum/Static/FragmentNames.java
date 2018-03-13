@@ -15,7 +15,7 @@ public class FragmentNames {
     public static final String FIXTURE = "fixture";
     public static final String EQUIPOS = "equipos";
     public static final String FUTBOLISTAS = "futbolistas";
-
+    public static final String STICKERSUNO = "stickeruno";
 
 
 

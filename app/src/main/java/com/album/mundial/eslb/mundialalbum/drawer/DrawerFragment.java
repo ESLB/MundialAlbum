@@ -57,7 +57,6 @@ public class DrawerFragment extends Fragment {
         items.add(new DrawerItem("Mi Album", "", FragmentNames.MI_ALBUM));
         items.add(new DrawerItem("Intercambiar Stickers", "", FragmentNames.INTERCAMBIAR));
         items.add(new DrawerItem("Comprar Stickers","", FragmentNames.COMPRAR_STICK));
-        items.add(new DrawerItem("Inicio", "", FragmentNames.INICIO));
         items.add(new DrawerItem("Mi Perfil", "", FragmentNames.MI_PERFIL));
         items.add(new DrawerItem("Mis Amigos", "", FragmentNames.MIS_AMIGOS));
         items.add(new DrawerItem("Concursos","", FragmentNames.CONCURSOS));

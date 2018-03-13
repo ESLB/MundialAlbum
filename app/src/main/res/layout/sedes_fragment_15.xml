@@ -1,13 +1,15 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background_sede"
-    tools:context="com.album.mundial.eslb.mundialalbum.Fragments.SedesFragment_15">
+    tools:context="com.album.mundial.eslb.mundialalbum.Fragments.StickersUnoFragment_15">
 
     <TextView
+        android:id="@+id/labelStickers"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="5dp"
         android:gravity="center_horizontal"

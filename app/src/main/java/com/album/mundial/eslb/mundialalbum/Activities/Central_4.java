@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 
 import com.album.mundial.eslb.mundialalbum.Fragments.AlbumFragment_12;
 import com.album.mundial.eslb.mundialalbum.Fragments.ComprarFragment_11;
-import com.album.mundial.eslb.mundialalbum.Fragments.DetalleJugadorFragment_9;
 import com.album.mundial.eslb.mundialalbum.Fragments.EquiposFragment_14;
 import com.album.mundial.eslb.mundialalbum.Fragments.FixtureFragment_16;
 import com.album.mundial.eslb.mundialalbum.Fragments.GruposFragment_5;
@@ -17,7 +16,7 @@ import com.album.mundial.eslb.mundialalbum.Fragments.FutbolistasFragment_8;
 import com.album.mundial.eslb.mundialalbum.Fragments.MiPerfilFragment_7;
 import com.album.mundial.eslb.mundialalbum.Fragments.AmigosFragment_10;
 import com.album.mundial.eslb.mundialalbum.Fragments.PaisesFragment_6;
-import com.album.mundial.eslb.mundialalbum.Fragments.SedesFragment_15;
+import com.album.mundial.eslb.mundialalbum.Fragments.StickersUnoFragment_15;
 import com.album.mundial.eslb.mundialalbum.R;
 import com.album.mundial.eslb.mundialalbum.SingletonStickers;
 import com.album.mundial.eslb.mundialalbum.Static.FragmentNames;
@@ -84,7 +83,7 @@ public class Central_4 extends AppCompatActivity {
                 orden = 2;
                 break;
             case FragmentNames.SEDES:
-                fragment = new SedesFragment_15();
+                fragment = new StickersUnoFragment_15();
                 toolbar.setSubtitle("Sedes");
                 orden = 1;
                 break;
@@ -98,6 +97,11 @@ public class Central_4 extends AppCompatActivity {
                 toolbar.setSubtitle("Fixture");
                 orden = 1;
                 break;
+            case FragmentNames.STICKERSUNO:
+                fragment = new StickersUnoFragment_15();
+                orden = 1;
+                break;
+
         }
         if(fm!=null){
             fm.beginTransaction().replace(R.id.fragment_container, fragment).commit();

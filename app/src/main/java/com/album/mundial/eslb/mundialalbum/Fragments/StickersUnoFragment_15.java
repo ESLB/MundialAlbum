@@ -10,21 +10,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.album.mundial.eslb.mundialalbum.R;
 import com.album.mundial.eslb.mundialalbum.SingletonStickers;
+import com.album.mundial.eslb.mundialalbum.Static.ArgumentsFragment;
 import com.album.mundial.eslb.mundialalbum.models.StickersModel;
 
 import java.util.List;
 
-public class SedesFragment_15 extends Fragment {
+public class StickersUnoFragment_15 extends Fragment {
 
     private RecyclerView mRecyclerView;
     private ItemsAdapter mItemsAdapter;
+    private TextView etiqueta;
+    private List<StickersModel> stickers;
+    private LinearLayout layout;
 
-
-    public SedesFragment_15() {
+    public StickersUnoFragment_15() {
         // Required empty public constructor
     }
 
@@ -37,12 +41,36 @@ public class SedesFragment_15 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.sedes_fragment_15, container, false);
+        etiqueta = (TextView) view.findViewById(R.id.labelStickers);
+        layout = (LinearLayout) view.findViewById(R.id.linearLayout);
         mRecyclerView =  (RecyclerView) view.findViewById(R.id.recyclerSedes);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        List<StickersModel> stickers = SingletonStickers.get(getActivity()).getVacioSedes();
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+        WireUpFragment();
         mItemsAdapter = new ItemsAdapter(stickers);
         mRecyclerView.setAdapter(mItemsAdapter);
         return view;
+    }
+
+    private void WireUpFragment() {
+        if(ArgumentsFragment.FragmentAmostrar==ArgumentsFragment.EQUIPOS){
+            layout.setBackgroundColor(getResources().getColor(R.color.background_equipos));
+            stickers = SingletonStickers.get(getActivity()).getVacioEquipos();
+            etiqueta.setText("EQUIPOS");
+        }
+        if(ArgumentsFragment.FragmentAmostrar==ArgumentsFragment.FIXTURE){
+            layout.setBackgroundColor(getResources().getColor(R.color.background_fixture));
+            stickers = SingletonStickers.get(getActivity()).getVacioFixture();
+            etiqueta.setText("PARTIDOS PROGRAMADOS");
+        }
+        if(ArgumentsFragment.FragmentAmostrar==ArgumentsFragment.SEDES){
+            layout.setBackgroundColor(getResources().getColor(R.color.background_sede));
+            stickers = SingletonStickers.get(getActivity()).getVacioSedes();
+            etiqueta.setText("ESTADIOS DEL MUNDIAL");
+        }
+
+
+
+
     }
 
 

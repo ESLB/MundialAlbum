@@ -56,12 +56,6 @@ public class PaisesFragment_6 extends Fragment {
         items.add(new Item(R.drawable.japon,"Japon"));
         items.add(new Item(R.drawable.portugal,"Portugal"));
         items.add(new Item(R.drawable.rusia,"Rusia"));
-        items.add(new Item(R.drawable.dinamarca, "Dinamarca"));
-        items.add(new Item(R.drawable.peru, "Perú"));
-        items.add(new Item(R.drawable.iran,"Irán"));
-        items.add(new Item(R.drawable.japon,"Japon"));
-        items.add(new Item(R.drawable.portugal,"Portugal"));
-        items.add(new Item(R.drawable.rusia,"Rusia"));
         return items;
     }
 
