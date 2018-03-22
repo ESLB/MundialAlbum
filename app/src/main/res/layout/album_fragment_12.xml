@@ -1,8 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/album"
+    android:paddingBottom="@dimen/badge_height_padding"
+
+
     android:orientation="vertical"
     tools:context="com.album.mundial.eslb.mundialalbum.Fragments.AlbumFragment_12">
 
@@ -10,13 +12,15 @@
     <Button
         android:id="@+id/futbolistasButton"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="20dp"
         android:layout_margin="5dp"
         android:layout_weight="1"
+
         android:background="@color/futbolistas"
+        android:fontFamily="@font/roboto_thin"
         android:text="Futbolistas"
         android:textSize="30sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/equiposButton"
@@ -25,9 +29,10 @@
         android:layout_margin="5dp"
         android:layout_weight="1"
         android:background="@color/equipos"
+        android:fontFamily="@font/roboto_thin"
         android:text="Equipos"
         android:textSize="30sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/sedesButton"
@@ -36,9 +41,10 @@
         android:layout_margin="5dp"
         android:layout_weight="1"
         android:background="@color/sedes"
+        android:fontFamily="@font/roboto_thin"
         android:text="Sedes"
         android:textSize="30sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/fixtureButton"
@@ -47,7 +53,8 @@
         android:layout_margin="5dp"
         android:layout_weight="1"
         android:background="@color/fixture"
+        android:fontFamily="@font/roboto_thin"
         android:text="Fixture"
         android:textSize="30sp"
-        android:textStyle="italic" />
-</LinearLayout>
+        android:textStyle="bold" />
+</RelativeLayout>

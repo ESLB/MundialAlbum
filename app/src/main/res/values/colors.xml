@@ -5,11 +5,11 @@
     <color name="colorAccent">#FF4081</color>
     <color name="header">#d0d0d0</color>
     <color name="tint">#4c4b4b4b</color>
-    <color name="equipos">#edff0073</color>
+    <color name="equipos">#00227b</color>
     <color name="sedes">#0ba471</color>
     <color name="fixture">#5699d9</color>
     <color name="album">#b5d4f2</color>
-    <color name="futbolistas">#da3838</color>
+    <color name="futbolistas">#ef5350</color>
     <color name="background_sede">#a652b650</color>
     <color name="background_fixture">#985184d7</color>
     <color name="background_equipos">#a6f22929</color>
