@@ -32,6 +32,7 @@ public class AlbumFragment_12 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.album_fragment_12, container, false);
 
         Equipos = (Button) view.findViewById(R.id.equiposButton);

@@ -36,7 +36,7 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/antonie_greazman_francia_listo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/imageView8"

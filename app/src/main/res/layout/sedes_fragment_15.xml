@@ -10,13 +10,15 @@
 
     <TextView
         android:id="@+id/labelStickers"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center_horizontal"
+        android:text="Estadios del Mundial"
+        android:textAllCaps="true"
         android:textSize="24sp"
-        android:text="Estadios del Mundial" />
+        android:textStyle="bold|italic" />
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
