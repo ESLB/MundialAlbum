@@ -12,6 +12,7 @@ public class SingletonStickers {
 
     private static SingletonStickers sSingleStickers;
     private Context mContext;
+
     String[] Jugadores = {"Benjamin Moukandjo",
             "Jean Makoun",
             "Gerard Piqué",
