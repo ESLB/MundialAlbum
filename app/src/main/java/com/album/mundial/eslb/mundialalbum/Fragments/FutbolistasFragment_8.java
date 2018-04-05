@@ -54,8 +54,7 @@ public class FutbolistasFragment_8 extends Fragment {
     private List<Item> creatItems(){
         List<Item> items = new ArrayList<>();
         SingletonStickers ss = SingletonStickers.get(getActivity());
-        List<StickersModel> stickerModel = ss.getVacioFutbolistas();
-        stickerModel = stickerModel.subList(0,12);
+        List<StickersModel> stickerModel = ss.getStickers("argentina");
         for(StickersModel s : stickerModel){
             items.add(new Item(s.getIdImagen(), s.getShortTxt()));
         }
